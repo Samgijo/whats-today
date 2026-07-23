@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>This Day in History — Discover What Happened Today</title>
+    <meta name="description" content="Discover remarkable historical events that happened on any date. Powered by AI to bring history to life." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+
+    <!-- Animated background particles -->
+    <div class="bg-particles" id="bgParticles"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-glow"></div>
+        <h1 class="header-title">
+            <span class="header-icon">📜</span>
+            This Day in History
+        </h1>
+        <p class="header-subtitle">Discover the remarkable events that shaped our world</p>
+    </header>
+
+    <!-- Date Picker Section -->
+    <section class="date-picker-section">
+        <div class="date-picker-card">
+            <div class="date-picker-card-glow"></div>
+            <h2 class="date-picker-heading">Choose a Date</h2>
+            <div class="date-picker-controls">
+                <div class="select-wrapper">
+                    <label for="monthSelect">Month</label>
+                    <select id="monthSelect">
+                        <option value="1">January</option>
+                        <option value="2">February</option>
+                        <option value="3">March</option>
+                        <option value="4">April</option>
+                        <option value="5">May</option>
+                        <option value="6">June</option>
+                        <option value="7">July</option>
+                        <option value="8">August</option>
+                        <option value="9">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select>
+                </div>
+                <div class="select-wrapper">
+                    <label for="daySelect">Day</label>
+                    <select id="daySelect"></select>
+                </div>
+                <button id="searchBtn" class="btn-search" type="button">
+                    <span class="btn-text">Explore History</span>
+                    <span class="btn-loader" id="btnLoader"></span>
+                </button>
+            </div>
+            <button id="todayBtn" class="btn-today" type="button">📅 Use Today's Date</button>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section" id="resultsSection" style="display:none;">
+        <div class="results-header">
+            <h2 class="results-title" id="resultsTitle"></h2>
+            <p class="results-count" id="resultsCount"></p>
+        </div>
+        <div class="timeline" id="timeline"></div>
+    </section>
+
+    <!-- Error Display -->
+    <div class="error-toast" id="errorToast" style="display:none;">
+        <span class="error-icon">⚠️</span>
+        <span class="error-message" id="errorMessage"></span>
+    </div>
+
+    <footer class="footer">
+        <p>Powered by Gemini AI · Built with FastAPI</p>
+    </footer>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
